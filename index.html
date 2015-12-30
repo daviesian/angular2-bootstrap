@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular 2 Bootstrap</title>
+    <link rel="stylesheet" href="/dist/css/app.css">
+</head>
+<body>
+
+    <app-component>Loading App...</app-component>
+
+    <script src="/node_modules/systemjs/dist/system.js"></script>
+    <script src="/system.config.js"></script>
+
+    <!--
+        Load the script bundles. During development these will not exist,
+        which is not a problem. SystemJS will load the files individually
+        as required, compiling TypeScript to JS as it goes.
+    -->
+    <script src="/dist/js/vendor.js"></script>
+    <script src="/dist/js/app.js"></script>
+
+    <script>
+        // If packages have been loaded in the optional bundle files above, SystemJS will use them instead of
+        // requesting the files dynamically from the server.
+
+        System.import('app/boot').catch(console.error.bind(console));
+
+    </script>
+
+</body>
+</html>
