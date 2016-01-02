@@ -5,8 +5,8 @@
     "lite": "lite-server",
     "start": "concurrent \"node build.js vendor\" \"npm run sass\" \"npm run sass:w\" \"npm run lite\" ",
     "build": "concurrent \"node build.js app\" \"node build.js vendor\" ",
-    "sass": "node-sass --include-path node_modules/bootstrap/scss --include-path node_modules/tether/src/css src/scss/app.scss --output dist/css --source-map true --output-style compressed",
-    "sass:w": "npm run sass -- -w"
+    "sass": "node-sass --include-path node_modules/bootstrap/scss --include-path node_modules/tether/src/css --include-path node_modules/font-awesome/scss src/scss/app.scss --output dist/css --source-map true --output-style compressed",
+    "sass:w": "npm run sass -- --watch=\"src/scss\" -r"
   },
   "license": "ISC",
   "dependencies": {
