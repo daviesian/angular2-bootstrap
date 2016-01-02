@@ -1,7 +1,10 @@
+// Third-party imports
 @import "bootstrap_variables";
 @import "bootstrap";
 @import "tether";
 
+$fa-font-path: "/node_modules/font-awesome/fonts";
+@import "font-awesome";
 h1 {
   color: #00a;
 }
